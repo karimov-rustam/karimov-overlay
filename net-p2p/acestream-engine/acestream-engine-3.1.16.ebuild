@@ -9,15 +9,13 @@ inherit multilib python-r1 unpacker
 
 DESCRIPTION="ACE Stream Engine"
 HOMEPAGE="http://torrentstream.org/"
-SRC_URI=" amd64? ( http://dl.acestream.org/ubuntu/12/acestream_3.0.5.1_ubuntu_12.04_x86_64.tar.gz )
-	  x86? ( http://dl.acestream.org/ubuntu/12/acestream_3.0.3_ubuntu_12.04_i686.tar.gz )"
+SRC_URI=" amd64? ( http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz )"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="+gtk"
 
-#DEPEND="<dev-python/m2crypto-0.26[${PYTHON_USEDEP}]
 DEPEND="dev-python/m2crypto[${PYTHON_USEDEP}]
 		dev-python/apsw[${PYTHON_USEDEP}]
 		gtk? ( dev-libs/acestream-python-appindicator )
@@ -26,7 +24,7 @@ DEPEND="dev-python/m2crypto[${PYTHON_USEDEP}]
 		net-misc/telnet-bsd"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/acestream_3.0.5.1_ubuntu_12.04_x86_64
+S="${WORKDIR}"/acestream_3.1.16_ubuntu_16.04_x86_64
 
 QA_PRESTRIPPED="usr/bin/acestreamengine
 usr/share/acestream/lib/acestreamengine/Core.so
@@ -37,8 +35,7 @@ usr/share/acestream/lib/acestreamengine/CoreApp.so
 usr/share/acestream/lib/acestreamengine/streamer.so"
 
 pkg_setup() {
-	use amd64 && S="${WORKDIR}"/acestream_3.0.5.1_ubuntu_12.04_x86_64
-	use x86 && S="${WORKDIR}"/acestream_3.0.3_ubuntu_12.04_i686
+	use amd64 && S="${WORKDIR}"/acestream_3.1.16_ubuntu_16.04_x86_64
 }
 
 src_install(){
