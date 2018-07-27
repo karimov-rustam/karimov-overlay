@@ -4,7 +4,6 @@
 EAPI=6
 
 inherit cmake-utils git-r3
-# inherit fdo-mime
 inherit xdg-utils
 inherit gnome2-utils
 
@@ -36,8 +35,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	# use prefix && export XDG_DATA_DIRS="${EPREFIX}"/usr/share
-	# fdo-mime_mime_database_update
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
