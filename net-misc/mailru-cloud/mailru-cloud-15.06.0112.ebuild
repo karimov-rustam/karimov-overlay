@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
@@ -7,11 +7,6 @@ inherit rpm bash-completion-r1 versionator
 
 DESCRIPTION="Mail.Ru Cloud"
 HOMEPAGE="http://cloud.mail.ru/"
-
-# SRC_URI="
-#     x86?   ( https://linuxdesktopcloud.cdnmail.ru/rpm/default/mail.ru-cloud-fedora-$(get_version_component_range 1-1)-$(get_version_component_range 2-3).i386.rpm )
-#     amd64? ( https://linuxdesktopcloud.cdnmail.ru/rpm/default/mail.ru-cloud-fedora-$(get_version_component_range 1-1)-$(get_version_component_range 2-3).x86_64.rpm )
-#     "
 
 SRC_URI="
 	x86?   ( https://linuxdesktopcloud.cdnmail.ru/rpm/default/mail.ru-cloud-fedora-$(get_version_component_range 1-2)-$(get_version_component_range 3-3).i386.rpm )
